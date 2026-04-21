@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -69,6 +69,39 @@
   }
   nav a:hover { color: var(--accent-deep); }
   nav a:hover::after { width: 100%; }
+
+  .has-dropdown { position: relative; }
+  .dropdown {
+    position: absolute;
+    top: 100%; left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 4px;
+    padding: 8px 0;
+    min-width: 180px;
+    opacity: 0; visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex; flex-direction: column;
+    z-index: 200;
+  }
+  .has-dropdown:hover .dropdown {
+    opacity: 1; visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .dropdown a {
+    padding: 10px 20px;
+    font-size: 13px;
+    color: var(--ink);
+    display: block;
+    text-align: center;
+  }
+  .dropdown a::after { display: none; }
+  .dropdown a:hover {
+    color: var(--accent);
+    background: var(--paper-warm);
+  }
   .reserve-btn {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 11px 22px;
@@ -741,13 +774,21 @@
         <small>TORIKAI EYE CLINIC</small>
       </div>
     </a>
-    <nav>
+        <nav>
       <ul>
-        <li><a href="#">診療</a></li>
-        <li><a href="#">医師紹介</a></li>
-        <li><a href="#">診療時間</a></li>
-        <li><a href="#">お知らせ</a></li>
-        <li><a href="#">アクセス</a></li>
+        <li class="has-dropdown">
+          <a href="#">診療内容</a>
+          <div class="dropdown">
+            <a href="glaucoma.html">緑内障</a>
+            <a href="cataract.html">白内障</a>
+            <a href="multifocal.html">多焦点眼内レンズ</a>
+            <a href="icl.html">ICL</a>
+            <a href="eyelash.html">IPL治療</a>
+          </div>
+        </li>
+        <li><a href="doctors.html">医師紹介</a></li>
+        <li><a href="access.html">アクセス</a></li>
+        <li><a href="first-visit.html">初めての方へ</a></li>
       </ul>
     </nav>
     <a href="https://app.doctor-party.net/torikai/" class="reserve-btn">予約</a>
