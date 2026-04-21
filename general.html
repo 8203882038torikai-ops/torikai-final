@@ -566,6 +566,70 @@
     .page-hero h1::after { margin-top: 20px; }
   }
 
+  /* Hamburger Menu CSS */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--ink);
+    transition: all 0.3s ease;
+  }
+  .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity: 0; }
+  .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--paper);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  .mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .mobile-menu a {
+    font-size: 18px;
+    color: var(--ink);
+    text-decoration: none;
+    margin: 12px 0;
+    font-family: 'Noto Serif JP', serif;
+  }
+  .mobile-menu .sub-link { font-size: 15px; margin: 8px 0; color: var(--ink-soft); }
+  .mobile-menu .mobile-reserve-btn {
+    margin-top: 24px;
+    padding: 12px 32px;
+    background: var(--accent);
+    color: var(--paper);
+    border-radius: 4px;
+  }
+  @media (max-width: 768px) {
+    nav ul { display: none !important; }
+    .header-inner .reserve-btn { display: none !important; }
+    .hamburger { display: flex !important; }
+    .hero-wide h1 {
+      font-size: clamp(24px, 6vw, 36px) !important;
+      white-space: nowrap;
+    }
+  }
 </style>
 </head>
 <body>
@@ -598,6 +662,7 @@
       </ul>
     </nav>
     <a href="https://app.doctor-party.net/torikai/" class="reserve-btn">予約</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </header>
 
@@ -769,5 +834,31 @@
   });
 </script>
 
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner" style="display:flex; flex-direction:column; align-items:center;">
+    <a href="#">診療内容</a>
+    <a href="glaucoma.html" class="sub-link">緑内障</a>
+    <a href="cataract.html" class="sub-link">白内障</a>
+    <a href="multifocal.html" class="sub-link">多焦点眼内レンズ</a>
+    <a href="icl.html" class="sub-link">ICL</a>
+    <a href="ipl-beauty.html" class="sub-link">IPL治療</a>
+    <a href="eyelash.html" class="sub-link">まつ毛外来</a>
+    <div style="width: 40px; height: 1px; background: var(--ink-light); margin: 10px 0;"></div>
+    <a href="doctors.html">医師紹介</a>
+    <a href="access.html">アクセス</a>
+    <a href="first-visit.html">初めての方へ</a>
+    <a href="https://app.doctor-party.net/torikai/" class="mobile-reserve-btn">予約</a>
+  </div>
+</div>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if(hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+  }
+</script>
 </body>
 </html>
