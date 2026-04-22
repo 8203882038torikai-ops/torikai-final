@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>一般眼科診療｜とりかい眼科 白内障・緑内障クリニック｜松山市</title>
-<meta name="description" content="松山市のとりかい眼科。ドライアイ、アレルギー性結膜炎、糖尿病網膜症、飛蚊症など、日常的な目のトラブルから緊急性の高い疾患まで幅広く対応。高度医療が必要な場合は連携病院へ迅速にご紹介します。">
+<title>眼瞼下垂の治療｜とりかい眼科 白内障・緑内障クリニック｜松山市</title>
+<meta name="description" content="松山市のとりかい眼科。眼瞼下垂の手術・点眼治療に対応。経結膜ミュラー筋タッキングによる傷跡の目立たない手術と、アップニークミニ点眼を取り扱っています。まぶたが重い、視界が狭いと感じる方はご相談ください。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
@@ -292,22 +292,34 @@
   .faq-q {
     font-family: 'Noto Serif JP', serif;
     font-weight: 500; font-size: 17px;
-    color: var(--ink); display: flex; gap: 18px;
+    color: var(--ink);
     margin-bottom: 14px; line-height: 1.6;
+    padding-left: 38px;
+    position: relative;
   }
   .faq-q .marker {
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
     color: var(--accent); font-size: 22px;
-    flex-shrink: 0; line-height: 1; padding-top: 2px;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    top: 4px;
   }
   .faq-a {
-    display: flex; gap: 18px;
     font-size: 14px; color: var(--ink-soft); line-height: 2;
+    padding-left: 38px;
+    position: relative;
   }
   .faq-a .marker {
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
-    color: var(--accent-deep); font-size: 22px;
-    flex-shrink: 0; line-height: 1; padding-top: 2px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--accent-deep);
+    font-size: 22px;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    top: 4px;
   }
   .cta-section {
     background: var(--ink); color: var(--paper);
@@ -383,99 +395,70 @@
   }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
-  .disease-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-top: 40px;
-  }
-  .disease-card {
+  .lens-cta {
     background: var(--paper);
-    border: 1px solid var(--line-soft);
-    padding: 32px 30px;
-    transition: border-color 0.3s, transform 0.3s;
+    padding: 40px 40px;
+    margin-top: 40px;
+    border: 1px solid var(--accent);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: center;
   }
-  .disease-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-  }
-  .disease-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 13px;
-    letter-spacing: 0.2em;
-    color: var(--accent-deep);
-    margin-bottom: 10px;
-  }
-  .disease-card h3 {
+  .lens-cta-text h3 {
     font-family: 'Noto Serif JP', serif;
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 6px;
-    letter-spacing: 0.04em;
+    font-weight: 600; font-size: 20px;
+    margin-bottom: 10px; letter-spacing: 0.04em;
   }
-  .disease-card h3 small {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 12px;
-    color: var(--ink-muted);
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    margin-top: 4px;
+  .lens-cta-text p {
+    font-size: 14px; color: var(--ink-soft);
+    line-height: 1.9; margin: 0;
   }
-  .disease-card p {
-    font-size: 13.5px;
-    color: var(--ink-soft);
-    line-height: 1.95;
-    margin-top: 16px;
-  }
-  .disease-card .care-level {
-    display: inline-block;
-    font-size: 11px;
-    padding: 4px 10px;
-    background: var(--accent-soft);
-    color: var(--accent-deep);
-    letter-spacing: 0.08em;
+  .lens-cta-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    background: var(--accent); color: var(--paper);
+    text-decoration: none;
+    font-size: 13px; letter-spacing: 0.15em;
     border-radius: 2px;
-    margin-top: 18px;
-    font-weight: 500;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
   }
-  .disease-card .care-level.referral {
-    background: #f0e8d8;
-    color: #7a5a20;
+  .lens-cta-btn:hover { background: var(--accent-deep); transform: translateY(-1px); }
+  .lens-cta-btn .arrow {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
   }
   @media (max-width: 900px) {
-    .disease-grid { grid-template-columns: 1fr; gap: 16px; }
-    .disease-card { padding: 28px 24px; }
+    .lens-cta { grid-template-columns: 1fr; gap: 20px; padding: 32px 28px; }
+    .lens-cta-btn { justify-content: center; }
   }
-
-  .category-divider {
-    margin: 60px 0 40px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--line);
+  .surgery-spec {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 40px 0;
+  }
+  .spec-card {
+    background: var(--paper-warm);
+    padding: 32px 28px;
+    border-radius: 2px;
+    text-align: center;
+  }
+  .spec-card .num {
     font-family: 'Noto Serif JP', serif;
-    font-weight: 500;
-    font-size: 20px;
+    font-size: 34px; color: var(--accent-deep);
+    font-weight: 500; line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+  }
+  .spec-card .label {
+    font-size: 13px; color: var(--ink-soft);
     letter-spacing: 0.05em;
-    display: flex;
-    align-items: center;
-    gap: 16px;
   }
-  .category-divider::before {
-    content: '';
-    width: 32px;
-    height: 2px;
-    background: var(--accent);
-  }
-  .category-divider small {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 13px;
-    color: var(--accent-deep);
-    letter-spacing: 0.15em;
-    font-weight: 500;
-    margin-left: auto;
+  @media (max-width: 900px) {
+    .surgery-spec { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .spec-card { padding: 24px 16px; }
+    .spec-card .num { font-size: 32px; }
   }
 
   /* Enhanced diagnostic page hero */
@@ -649,7 +632,7 @@
           <a href="#">診療内容</a>
           <div class="dropdown">
             <a href="glaucoma.html">緑内障</a>
-            <a href="cataract.html">白内障</a>
+            <a href="Ptosis.html">白内障</a>
             <a href="multifocal.html">多焦点眼内レンズ</a>
             <a href="icl.html">ICL</a>
             <a href="ipl-beauty.html">IPL治療</a>
@@ -672,47 +655,154 @@
     <div class="breadcrumb">
       <a href="#">Home</a><span class="sep">／</span>
       <a href="#">診療</a><span class="sep">／</span>
-      General
+      Ptosis
     </div>
-    <div class="page-hero-label">General Ophthalmology</div>
-    <h1>
-      一般眼科診療
-      <small>Common Eye Conditions &amp; Care</small>
-    </h1>
+    <div class="page-hero-label">Ptosis Surgery</div>
+    <h1>眼瞼下垂の治療<small>Surgery &amp; Eye Drop Treatment</small></h1>
     <p class="page-hero-lead">
-      目の違和感、充血、かすみ、かゆみ。<br>
-      眼の健康全般について、お気軽にご相談ください。<br>
-      必要に応じて高度医療機関と連携し、<br>
-      責任を持って診療をご提供します。
+      まぶたが重い、目を開けるのがつらい、視野が狭くなった——<br>
+      これらは眼瞼下垂の代表的なサインです。<br>
+      当院では手術治療（経結膜ミュラー筋タッキング）と点眼治療（アップニークミニ）の<br>
+      両方に対応し、一人ひとりの状態に合わせた治療をご提案します。
     </p>
   </div>
 </section>
 
-<section class="content">
+<div class="toc-bar">
+  <div class="toc-inner">
+    <a href="#about"><span class="toc-num">01</span>眼瞼下垂とは</a>
+    <a href="#surgery"><span class="toc-num">02</span>手術治療</a>
+    <a href="#eyedrop"><span class="toc-num">03</span>点眼治療</a>
+    <a href="#flow"><span class="toc-num">04</span>受診の流れ</a>
+    <a href="#faq"><span class="toc-num">05</span>よくある質問</a>
+  </div>
+</div>
+
+<section class="content" id="about">
   <div class="content-inner">
-    <div class="section-label">General Ophthalmology</div>
-    <h2 class="section-title">眼科一般。</h2>
+    <div class="section-label">01 / About Ptosis</div>
+    <h2 class="section-title">眼瞼下垂とは。</h2>
     <div class="prose">
-      <p>当院では、白内障・緑内障などの専門的な治療に加え、<strong>眼科一般診療</strong>として幅広い目の病気に対応しています。「なんとなく目の調子が悪い」「定期検査を受けたい」といったお気軽なご相談から、緊急性の高い疾患まで、誠実に診療いたします。</p>
-
-      <h3>糖尿病網膜症</h3>
-      <p>糖尿病の合併症として起こる、網膜の血管障害です。初期には自覚症状がほとんどなく、気づかないうちに進行することがあります。当院では眼底検査・蛍光眼底造影・光干渉断層計（OCT）を用いた精密な診断を行い、病期に応じて<strong>網膜光凝固術（レーザー治療）</strong>や<strong>抗VEGF薬の硝子体内注射</strong>を院内で実施しています。進行した症例では、連携病院への迅速なご紹介も行います。</p>
-
-      <h3>網膜静脈閉塞症（RVO）</h3>
-      <p>網膜の静脈が詰まることで、出血・浮腫・視力低下を引き起こす病気です。黄斑部に浮腫が生じた場合は<strong>抗VEGF薬の硝子体内注射</strong>が有効で、当院でも実施しています。定期的な経過観察が視力維持のカギとなります。</p>
-
-      <h3>加齢黄斑変性</h3>
-      <p>加齢により網膜の中心部（黄斑）が傷み、視野の中心が歪む・暗くなる病気です。特に滲出型は進行が速く、<strong>抗VEGF薬による早期治療</strong>が重要です。「物が歪んで見える（変視症）」を感じたら、できるだけ早くご受診ください。</p>
-
-      <h3>飛蚊症・網膜裂孔・網膜剥離</h3>
-      <p>「視野に糸くずや黒い点が浮かぶ」飛蚊症の多くは生理的なものですが、網膜裂孔（網膜の穴）や網膜剥離のサインであることもあります。急な増加・光視症・視野欠損があれば緊急受診が必要です。裂孔には<strong>レーザー治療（網膜光凝固術）</strong>で対応し、剥離が起きた場合は速やかに連携病院へご紹介します。</p>
-
-      <h3>ドライアイ・アレルギー性結膜炎・感染性結膜炎</h3>
-      <p>目の乾き・かゆみ・充血・目やにといった日常的なトラブルにも丁寧に対応します。ドライアイには点眼治療に加え、難治例にはIPL治療もご提案できます。アレルギー性結膜炎は季節性・通年性ともに対応しています。</p>
-
+      <p>眼瞼下垂とは、上まぶたを持ち上げる筋肉（眼瞼挙筋）やその延長である腱膜・ミュラー筋の機能が低下し、<strong>まぶたが下がって目が十分に開かなくなる状態</strong>です。視野が狭くなるだけでなく、常に眉毛を上げて目を開けようとするため、<strong>額のしわ・頭痛・肩こり・慢性的な疲労感</strong>を引き起こすこともあります。</p>
+      <p>原因のほとんどは加齢によるもので、腱膜が眼瞼板から外れたり薄くなったりすることで起こります（<strong>腱膜性眼瞼下垂</strong>）。長期にわたるコンタクトレンズの装用も、腱膜を傷める一因とされています。先天性のものや、神経・筋肉の疾患によって起こることもあります。</p>
+      <h3>こんな症状はありませんか</h3>
+      <p>まぶたが重い・眠そうに見える・目を大きく開けにくい・おでこにしわが増えた・頭痛・肩こりが続く——これらは眼瞼下垂の典型的なサインです。自覚症状が軽くても、視野検査で異常が見つかることがあります。気になる症状がある方は、一度ご相談ください。</p>
       <div class="highlight-box">
-        <div class="label">連携体制について</div>
-        <p>高度な手術（硝子体手術など）が必要な場合は、<strong>地域の基幹病院と緊密に連携</strong>し、速やかに専門医療をお受けいただけるよう橋渡しをします。診察から紹介まで、責任を持って対応いたします。</p>
+        <div class="label">治療のポイント</div>
+        <p>眼瞼下垂は、<strong>手術または点眼薬（アップニークミニ）によって改善できる</strong>疾患です。症状の程度・原因・生活スタイルに合わせて、最適な治療法をご提案します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content features" id="surgery">
+  <div class="content-wide-inner">
+    <div class="section-label">02 / Surgical Treatment</div>
+    <h2 class="section-title">手術治療：経結膜ミュラー筋タッキング。</h2>
+    <div class="prose" style="max-width:760px;">
+      <p>当院では、岩手県の小笠原孝祐先生が考案・普及させた<strong>「経結膜ミュラー筋タッキング法」</strong>を採用しています。この術式は、まぶたの裏側（結膜側）からアプローチするため、<strong>皮膚に一切切開を加えない</strong>のが最大の特徴です。</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-num">01</div>
+        <h3>皮膚を切らない</h3>
+        <p>まぶたの裏側からのアプローチなので、術後に皮膚の傷跡が残りません。「手術したことを知られたくない」という方にも適しています。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">02</div>
+        <h3>腫れが少なく回復が早い</h3>
+        <p>皮膚切開がないため、術後の腫れ・内出血が少なく、日常生活への影響を最小限に抑えられます。多くの方が数日〜1週間程度で職場復帰されています。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">03</div>
+        <h3>自然な仕上がり</h3>
+        <p>ミュラー筋そのものを短縮・固定する術式のため、まぶたの自然な動きを残しながら、必要な開大量を得ることができます。</p>
+      </div>
+    </div>
+    <div class="prose" style="max-width:760px; margin-top: 40px;">
+      <h3>適応について</h3>
+      <p>経結膜ミュラー筋タッキングは、<strong>腱膜性眼瞼下垂（加齢・コンタクト長期装用など）の方に特に適しています</strong>。先天性や神経筋疾患による眼瞼下垂など、原因によっては別の術式が適することもあります。診察時に詳しくご説明します。</p>
+      <p>手術は健康保険が適用される場合があります。眼瞼下垂と診断され、視野に影響があると判断された場合は保険診療の対象となります。詳細は受診時にご確認ください。</p>
+    </div>
+  </div>
+</section>
+
+<section class="content" id="eyedrop">
+  <div class="content-inner">
+    <div class="section-label">03 / Eye Drop Treatment</div>
+    <h2 class="section-title">点眼治療：アップニークミニ点眼。</h2>
+    <div class="prose">
+      <p>当院では、<strong>後天性の眼瞼下垂に対応する点眼薬「アップニークミニ」</strong>を取り扱っています。アップニークミニは、まぶたを持ち上げる作用を持つ成分（オキシメタゾリン塩酸塩）を含んでおり、<strong>点眼するだけでまぶたの開きを改善</strong>できる新しい選択肢です。</p>
+      <h3>こんな方に向いています</h3>
+      <p>手術をためらっている方、手術前に効果を確認したい方、生活環境上すぐに手術ができない方——そのような方にとって、点眼治療は安心して始められる第一歩です。1日1回の点眼で、数時間にわたって効果が続きます。</p>
+      <div class="highlight-box">
+        <div class="label">料金について</div>
+        <p>アップニークミニ点眼は<strong>自由診療</strong>となります。※現時点では価格未定のため、詳細はクリニックまでお問い合わせください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content" id="flow" style="background: var(--paper-warm);">
+  <div class="content-inner">
+    <div class="section-label">04 / Flow</div>
+    <h2 class="section-title">受診の流れ。</h2>
+    <div class="prose">
+      <p>初診から治療まで、患者さまのペースに合わせてご案内します。手術を迷っている段階でも、まずはお気軽にご相談ください。</p>
+    </div>
+    <div class="steps">
+      <div class="step-item">
+        <div class="step-label"><span class="num">01</span>Step</div>
+        <div class="step-body">
+          <h3>初診・診察・検査</h3>
+          <p>視力・眼圧・視野の検査に加え、まぶたの開き具合（眼瞼幅・上眼瞼縁反射距離）を計測します。また、眼瞼下垂の原因・種類を判断するために、縮瞳薬（フェニレフリン）を使った検査（フェニレフリンテスト）を行うことがあります。</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-label"><span class="num">02</span>Step</div>
+        <div class="step-body">
+          <h3>治療方針のご説明</h3>
+          <p>検査結果をもとに、手術・点眼のどちらが適しているか、あるいは両方を組み合わせるかを、患者さまと一緒に決めていきます。急いで手術を勧めることはありませんので、じっくりご検討ください。</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-label"><span class="num">03</span>Step</div>
+        <div class="step-body">
+          <h3>手術（経結膜ミュラー筋タッキング）</h3>
+          <p>局所麻酔で行う日帰り手術です。手術時間は両眼で30〜40分程度。術後はしばらく眼帯をしていただき、経過を確認したのち帰宅していただきます。</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-label"><span class="num">04</span>Step</div>
+        <div class="step-body">
+          <h3>術後の通院・経過観察</h3>
+          <p>術後1日目・1週間・1ヶ月・3ヶ月の節目に診察を行います。感染・縫合糸の露出・再発などがないかを確認し、必要に応じて追加処置を行います。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content faq" id="faq">
+  <div class="content-inner">
+    <div class="section-label">05 / FAQ</div>
+    <h2 class="section-title">よくあるご質問。</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span class="marker">Q.</span>手術は保険が使えますか？</div>
+        <div class="faq-a"><span class="marker">A.</span>視野障害を伴う眼瞼下垂は健康保険の適用対象となります。診察・検査の上で判断しますので、まずはご相談ください。美容目的の場合は自由診療となります。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="marker">Q.</span>手術後、すぐに仕事に戻れますか？</div>
+        <div class="faq-a"><span class="marker">A.</span>デスクワークであれば数日程度で復帰される方がほとんどです。ただし術後1週間程度は目の周りに内出血や腫れが残ることがありますので、接客業の方などは余裕を持ってスケジュールをお組みください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="marker">Q.</span>アップニークミニは毎日使い続ける必要がありますか？</div>
+        <div class="faq-a"><span class="marker">A.</span>アップニークミニは必要な時に使用する点眼薬です。毎日続けて使う方もいれば、大切な場面だけ使用する方もいます。詳しい使い方は処方時にご説明します。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="marker">Q.</span>コンタクトレンズを長年使っていますが関係がありますか？</div>
+        <div class="faq-a"><span class="marker">A.</span>ハードコンタクトレンズの長期装用は、まぶたの腱膜を傷め眼瞼下垂を引き起こす原因の一つとされています。若い年齢で眼瞼下垂が起きている場合は、この可能性も考慮します。</div>
       </div>
     </div>
   </div>
@@ -721,10 +811,11 @@
   <img src="data:image/png;base64,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" alt="" class="cta-bird">
   <div class="cta-inner">
     <div class="cta-label">Consultation</div>
-    <h2>気になる症状があれば、<br>早めのご相談を。</h2>
+    <h2>まぶたの悩みを、<br>一緒に解決しましょう。</h2>
     <p>
-      眼の違和感は、軽視せず早めに診察を。<br>
-      些細な症状でもお気軽にお越しください。
+      手術を迷っている方、点眼治療から始めたい方、<br>
+      他院で診断されたが納得いかない方、<br>
+      まずは一度お話を聞かせてください。
     </p>
     <div class="cta-buttons">
       <a href="https://app.doctor-party.net/torikai/" class="btn-reserve">インターネット予約</a>
@@ -765,7 +856,7 @@
   <div class="mobile-menu-inner" style="display:flex; flex-direction:column; align-items:center;">
     <a href="#">診療内容</a>
     <a href="glaucoma.html" class="sub-link">緑内障</a>
-    <a href="cataract.html" class="sub-link">白内障</a>
+    <a href="Ptosis.html" class="sub-link">白内障</a>
     <a href="multifocal.html" class="sub-link">多焦点眼内レンズ</a>
     <a href="icl.html" class="sub-link">ICL</a>
     <a href="ipl-beauty.html" class="sub-link">IPL治療</a>
@@ -789,4 +880,7 @@
 </script>
 </body>
 </html>
+
+
+
 
