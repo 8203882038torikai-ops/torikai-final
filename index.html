@@ -1206,6 +1206,63 @@
     }
   }
 
+  /* ===== News List ===== */
+  .news-list {
+    list-style: none;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .news-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid #e0ddd6;
+    flex-wrap: wrap;
+  }
+  .news-item:first-child {
+    border-top: 1px solid #e0ddd6;
+  }
+  .news-date {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    white-space: nowrap;
+    min-width: 130px;
+  }
+  .news-clock-icon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    color: var(--accent);
+  }
+  .news-tag {
+    display: inline-block;
+    background: var(--ink);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    white-space: nowrap;
+    border-radius: 1px;
+  }
+  .news-title {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0;
+    flex: 1;
+  }
+  @media (max-width: 600px) {
+    .news-item { gap: 10px; }
+    .news-date { min-width: auto; }
+    .news-title { width: 100%; flex: none; }
+  }
+
 </style>
 </head>
 <body>
@@ -1397,7 +1454,24 @@
   <div class="section-inner">
     <div class="section-label">News</div>
     <h2 class="section-title">お知らせ。</h2>
-    <p style="text-align: center; margin: 20px 0;">2026/5/6 ホームページを新しくしました</p>
+    <ul class="news-list">
+      <li class="news-item">
+        <div class="news-date">
+          <svg class="news-clock-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          2026.05.06
+        </div>
+        <span class="news-tag">お知らせ</span>
+        <p class="news-title">ホームページをリニューアルしました。</p>
+      </li>
+      <li class="news-item">
+        <div class="news-date">
+          <svg class="news-clock-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          2026.05.06
+        </div>
+        <span class="news-tag">採用情報</span>
+        <p class="news-title">視能訓練士（ORT）・医療事務・看護師を募集中です。</p>
+      </li>
+    </ul>
   </div>
 </section>
 
