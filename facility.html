@@ -3,52 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>院内紹介｜とりかい眼科</title>
+  <title>院内紹介｜とりかい眼科 白内障・緑内障クリニック｜松山市</title>
   <meta name="description" content="とりかい眼科の院内紹介ページです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f5f5f5;
+      --ink: #1a2420;
+      --ink-soft: #4a5550;
+      --ink-muted: #8a9590;
+      --paper: #fbfaf6;
+      --paper-warm: #f2efe7;
+      --accent: #00a256;
+      --accent-deep: #006838;
+      --line: #d8d3c8;
+      --line-soft: #ebe7dd;
       --card: #ffffff;
-      --line: #dddddd;
-      --text: #2a2a2a;
-      --subtle: #707070;
       --placeholder: #d0d0d0;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "Noto Sans JP", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.9;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(251, 250, 246, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 14px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--ink);
+      font-family: "Noto Serif JP", serif;
+      letter-spacing: 0.08em;
+      font-size: 15px;
+    }
+    .logo-link small {
+      margin-left: 10px;
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 11px;
+      color: var(--ink-muted);
+      letter-spacing: 0.15em;
+    }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent-deep); }
+    .reserve-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 11px 22px;
+      background: var(--accent);
+      color: var(--paper);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      border-radius: 2px;
+    }
+    .page-hero {
+      padding: 140px 32px 60px;
+      background: var(--paper-warm);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .page-hero-inner { max-width: 1100px; margin: 0 auto; }
+    .breadcrumb {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 20px;
+      letter-spacing: 0.12em;
+    }
+    .breadcrumb a { color: var(--ink-muted); text-decoration: none; }
+    .page-hero-label {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 14px;
+      letter-spacing: 0.25em;
+      color: var(--accent-deep);
+      margin-bottom: 14px;
+    }
+    .page-hero h1 {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 500;
+      font-size: clamp(32px, 4.5vw, 56px);
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      margin-bottom: 20px;
+    }
+    .page-hero-lead {
+      font-family: "Noto Serif JP", serif;
+      font-size: 17px;
+      line-height: 2;
+      color: var(--ink-soft);
+      max-width: 720px;
     }
     .container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 56px 20px 72px;
+      padding: 64px 20px 72px;
     }
     .hero {
       text-align: center;
       margin-bottom: 40px;
     }
-    .hero h1 {
+    .hero h2 {
       font-size: clamp(28px, 4vw, 40px);
       letter-spacing: 0.04em;
       margin-bottom: 12px;
+      font-family: "Noto Serif JP", serif;
+      font-weight: 500;
     }
     .hero p {
-      color: var(--subtle);
+      color: var(--ink-muted);
       font-size: 15px;
     }
     .gallery {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
-    }
-    @media (max-width: 900px) {
-      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 560px) {
-      .gallery { grid-template-columns: 1fr; }
     }
     .card {
       background: var(--card);
@@ -74,12 +174,126 @@
       font-weight: 600;
       letter-spacing: 0.03em;
     }
+    footer {
+      background: var(--paper-warm);
+      padding: 60px 32px 30px;
+      border-top: 1px solid var(--line-soft);
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+    .footer-name {
+      font-family: "Noto Serif JP", serif;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .footer-address { font-size: 12px; color: var(--ink-soft); line-height: 2; }
+    .copyright {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: 11px;
+      color: var(--ink-muted);
+      letter-spacing: 0.15em;
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+    }
+    .hamburger { display: none; }
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--paper);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    .mobile-menu.active { opacity: 1; visibility: visible; }
+    .mobile-menu a {
+      font-size: 18px;
+      color: var(--ink);
+      text-decoration: none;
+      margin: 12px 0;
+      font-family: "Noto Serif JP", serif;
+    }
+    .mobile-menu .sub-link { font-size: 15px; margin: 8px 0; color: var(--ink-soft); }
+    .mobile-menu .mobile-reserve-btn {
+      margin-top: 24px;
+      padding: 12px 32px;
+      background: var(--accent);
+      color: var(--paper);
+      border-radius: 4px;
+    }
+    @media (max-width: 900px) {
+      nav ul { display: none; }
+      .header-inner { padding: 10px 18px; }
+      .reserve-btn { display: none; }
+      .page-hero { padding: 110px 20px 50px; }
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 1001;
+      }
+      .hamburger span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: var(--ink);
+        transition: all 0.3s ease;
+      }
+      .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+      .hamburger.active span:nth-child(2) { opacity: 0; }
+      .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    }
+    @media (max-width: 560px) {
+      .gallery { grid-template-columns: 1fr; }
+      .logo-link small { display: none; }
+    }
   </style>
 </head>
 <body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">とりかい眼科 <small>TORIKAI EYE CLINIC</small></a>
+      <nav>
+        <ul>
+          <li><a href="glaucoma.html">緑内障</a></li>
+          <li><a href="cataract.html">白内障</a></li>
+          <li><a href="doctors.html">医師紹介</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="facility.html">院内紹介</a></li>
+          <li><a href="first-visit.html">初めての方へ</a></li>
+        </ul>
+      </nav>
+      <a href="https://app.doctor-party.net/torikai/" class="reserve-btn">予約</a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> ／ Facility</div>
+      <div class="page-hero-label">Facility</div>
+      <h1>院内紹介</h1>
+      <p class="page-hero-lead">当院内の設備と空間をご紹介します。</p>
+    </div>
+  </section>
+
   <main class="container">
     <section class="hero">
-      <h1>院内紹介</h1>
+      <h2>院内紹介</h2>
       <p>写真は準備でき次第、順次追加予定です。</p>
     </section>
     <section class="gallery" aria-label="院内ギャラリー">
@@ -90,5 +304,44 @@
       <article class="card"><div class="placeholder">PHOTO PLACEHOLDER</div><h2 class="room-name">手術室</h2></article>
     </section>
   </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-name">とりかい眼科<br>白内障・緑内障クリニック</div>
+      <div class="footer-address">
+        医療法人 eye光会 ／ 〒790-0064 愛媛県松山市愛光町2-29<br>
+        TEL 089-911-0106 ／ FAX 089-911-0107
+      </div>
+      <div class="copyright">© Torikai Eye Clinic · Ehime Matsuyama</div>
+    </div>
+  </footer>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="glaucoma.html" class="sub-link">緑内障</a>
+    <a href="cataract.html" class="sub-link">白内障</a>
+    <a href="multifocal.html" class="sub-link">多焦点眼内レンズ</a>
+    <a href="icl.html" class="sub-link">ICL</a>
+    <a href="ipl-beauty.html" class="sub-link">IPL治療</a>
+    <a href="general.html" class="sub-link">眼科一般</a>
+    <a href="ptosis.html" class="sub-link">眼瞼下垂</a>
+    <a href="myopia.html" class="sub-link">近視進行抑制</a>
+    <a href="doctors.html">医師紹介</a>
+    <a href="access.html">アクセス</a>
+    <a href="facility.html">院内紹介</a>
+    <a href="first-visit.html">初めての方へ</a>
+    <a href="disclosure.html" class="sub-link">施設基準・ご案内</a>
+    <a href="https://app.doctor-party.net/torikai/" class="mobile-reserve-btn">予約</a>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      });
+    }
+  </script>
 </body>
 </html>
