@@ -717,6 +717,36 @@
     .news-arrow { display: none; }
   }
 
+  /* ─── YouTube ─── */
+  .youtube-section { background: var(--paper); }
+  .youtube-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .youtube-embed-wrap {
+    position: relative;
+    padding-top: 56.25%;
+    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .youtube-embed-wrap iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+  .youtube-item-title {
+    margin-top: 14px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px; font-weight: 500;
+    letter-spacing: 0.05em; color: var(--ink);
+  }
+  @media (max-width: 900px) {
+    .youtube-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+
   /* ─── Footer ─── */
   footer { background: var(--paper-warm); padding: 80px 32px 32px; }
   .footer-inner { max-width: 1200px; margin: 0 auto; }
@@ -1482,6 +1512,40 @@
         <p class="news-title">視能訓練士（ORT）・医療事務・看護師を募集中です。</p>
       </li>
     </ul>
+  </div>
+</section>
+
+<!-- YOUTUBE -->
+<section class="youtube-section">
+  <div class="section-inner">
+    <div class="section-label">YouTube</div>
+    <h2 class="section-title">院長が愛媛朝日放送のえひめメディカルチャンネルに出演しました。</h2>
+    <div class="youtube-grid">
+      <div class="youtube-item">
+        <div class="youtube-embed-wrap">
+          <iframe src="https://www.youtube.com/embed/LGDN6VIMCRI" title="白内障" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="youtube-item-title">白内障</p>
+      </div>
+      <div class="youtube-item">
+        <div class="youtube-embed-wrap">
+          <iframe src="https://www.youtube.com/embed/Xbr_l_mYleM" title="白内障の手術" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="youtube-item-title">白内障の手術</p>
+      </div>
+      <div class="youtube-item">
+        <div class="youtube-embed-wrap">
+          <iframe src="https://www.youtube.com/embed/i6029C6TXoA" title="緑内障について" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="youtube-item-title">緑内障について</p>
+      </div>
+      <div class="youtube-item">
+        <div class="youtube-embed-wrap">
+          <iframe src="https://www.youtube.com/embed/2JsMTK49hTc" title="緑内障の治療" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="youtube-item-title">緑内障の治療</p>
+      </div>
+    </div>
   </div>
 </section>
 
