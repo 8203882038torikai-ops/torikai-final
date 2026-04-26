@@ -533,58 +533,48 @@
   .cost-table {
     background: var(--paper);
     border: 1px solid var(--line-soft);
-    border-radius: 4px;
     margin: 32px 0;
-    overflow: hidden;
   }
   .cost-row {
     display: grid;
     grid-template-columns: 1.6fr 1fr 1fr;
-    gap: 0; padding: 0;
+    gap: 24px;
+    padding: 22px 28px;
     border-bottom: 1px solid var(--line-soft);
-    align-items: stretch;
-  }
-  .cost-row > * {
-    padding: 20px 24px;
-  }
-  .cost-row > *:not(:last-child) {
-    border-right: 1px solid var(--line-soft);
+    align-items: center;
   }
   .cost-row:last-child { border-bottom: none; }
   .cost-row.header {
     background: var(--paper-warm);
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 12px; letter-spacing: 0.2em;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.2em;
     color: var(--ink-muted);
+    padding: 14px 28px;
   }
-  .cost-row.header > * { padding: 12px 24px; }
   .cost-label {
     font-family: 'Noto Serif JP', serif;
-    font-size: 14px; font-weight: 500; letter-spacing: 0.04em;
-    color: var(--ink);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
   }
-  .cost-desc { font-size: 12px; color: var(--ink-muted); margin-top: 4px; line-height: 1.7; }
+  .cost-desc {
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.8;
+  }
   .cost-amount {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 15px; color: var(--ink);
-    font-weight: 400;
-    display: flex; align-items: center;
-  }
-  .cost-row-total {
-    background: var(--paper-warm);
-    border-top: 2px solid var(--line-soft);
-  }
-  .cost-amount-total {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 20px; font-weight: 700;
-    color: var(--ink);
-    display: flex; align-items: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    color: var(--accent-deep);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
   }
   @media (max-width: 900px) {
-    .cost-row { grid-template-columns: 1fr; }
-    .cost-row > *:not(:last-child) { border-right: none; border-bottom: 1px solid var(--line-soft); }
+    .cost-row { grid-template-columns: 1fr; gap: 8px; padding: 20px 22px; }
     .cost-row.header { display: none; }
-    .cost-amount, .cost-amount-total { display: block; }
   }
   .disclaimer {
     font-size: 12px; color: var(--ink-muted); line-height: 1.9;
@@ -1001,13 +991,13 @@
         <div class="cost-amount">¥630,000</div>
         <div class="cost-amount">¥670,000</div>
       </div>
-      <div class="cost-row cost-row-total">
+      <div class="cost-row">
         <div>
           <div class="cost-label">合計</div>
-          <div class="cost-desc">※術後フォロー（2か月間）含む</div>
+          <div class="cost-desc">術後フォロー（2か月間）含む</div>
         </div>
-        <div class="cost-amount-total">¥670,000</div>
-        <div class="cost-amount-total">¥710,000</div>
+        <div class="cost-amount">¥670,000</div>
+        <div class="cost-amount">¥710,000</div>
       </div>
     </div>
 
