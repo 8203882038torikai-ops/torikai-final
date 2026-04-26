@@ -357,6 +357,40 @@
     border-radius: 2px; transition: background 0.2s, transform 0.2s;
   }
   .btn-reserve:hover { background: var(--accent-deep); transform: translateY(-1px); }
+  .dryeye-callout {
+    max-width: 760px;
+    margin: 0 auto;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 48px 56px;
+    text-align: center;
+    background: #fff;
+  }
+  .dryeye-callout .callout-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    color: var(--accent-deep);
+    margin-bottom: 16px;
+  }
+  .dryeye-callout h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(20px, 2.2vw, 26px);
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .dryeye-callout p {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--ink-soft);
+    margin-bottom: 36px;
+  }
+  @media (max-width: 680px) {
+    .dryeye-callout { padding: 36px 24px; }
+  }
   .btn-tel {
     padding: 16px 36px; background: transparent; color: var(--paper);
     text-decoration: none;
@@ -789,11 +823,11 @@
       <p>元々は医療機関で使われてきた装置で、近年は<strong>一度の施術で複数の肌悩みに同時にアプローチできる</strong>効率性から、幅広く導入されています。当院では眼科医療で培った光治療の知識を活かし、安全性を最優先にご提供しています。</p>
 
       <h3>当院の治療機器</h3>
-      <p>当院では、Lumenis社の<strong>OptiLight</strong>を導入しています。OptiLightは<strong>美肌治療とドライアイ治療の両方に使用できる</strong>IPL治療機器で、肌質改善だけでなく、マイボーム腺機能不全（MGD）によるドライアイ治療にも効果を発揮します。眼の周囲から顔全体まで幅広く対応できる機器です。副作用には個人差があり、担当医が事前に十分ご説明します。</p>
+      <p>当院では、Lumenis社の<strong>OptiLight</strong>を導入しています。眼科医療の知見に基づいて設計されたIPL治療機器で、眼の周囲から顔全体まで幅広く対応できます。副作用には個人差があり、担当医が事前に十分ご説明します。</p>
 
       <div class="highlight-box">
         <div class="label">20+ Years of Experience</div>
-        <p>当院では<strong>開業当初（約20年前）から美容IPL治療を導入</strong>しており、愛媛県内でも長年の経験と実績があります。また、同じ機器でドライアイ治療にも対応できるため、肌のお悩みと眼の乾きの両方にお困りの方にも適した環境が整っています。</p>
+        <p>当院では<strong>開業当初（約20年前）から美容IPL治療を導入</strong>しており、愛媛県内でも長年の経験と実績があります。眼科クリニックならではの安全管理のもと、一人ひとりの肌の状態に合わせた施術をご提供しています。</p>
       </div>
     </div>
   </div>
@@ -931,6 +965,19 @@
   </div>
 </section>
 
+<section class="content" id="dryeye-note" style="background: var(--accent-soft);">
+  <div class="content-inner">
+    <div class="dryeye-callout">
+      <div class="callout-label">Dry Eye Treatment</div>
+      <h2>IPLはドライアイ治療にも有効です</h2>
+      <p>当院では、同じIPL治療器（OptiLight M22）を用いた<br>
+      ドライアイ（マイボーム腺機能不全）の治療も行っております。<br>
+      目の乾きや不快感でお悩みの方はご相談ください。</p>
+      <a href="ipl-dryeye.html" class="btn-reserve">ドライアイ治療の詳細はこちら</a>
+    </div>
+  </div>
+</section>
+
 <section class="content faq" id="faq">
   <div class="content-inner">
     <div class="section-label">05 / FAQ</div>
@@ -956,43 +1003,6 @@
         <div class="faq-q"><span class="marker">Q.</span>医療脱毛のようにクリニックを替えても継続できますか？</div>
         <div class="faq-a"><span class="marker">A.</span>可能ですが、機器により照射エネルギーや設定が異なります。肌の反応を見ながら調整していく治療のため、同じクリニックで継続される方が効果的です。</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="content" id="dryeye" style="background: var(--paper-warm);">
-  <div class="content-inner">
-    <div class="section-label">06 / Dry Eye Treatment</div>
-    <h2 class="section-title">ドライアイの治療</h2>
-    <div class="prose">
-
-      <h3>点眼治療</h3>
-      <p>まずは点眼薬による治療を行います。<br>
-      人工涙液や保湿成分を含む点眼薬で<br>
-      目の表面を保護します。</p>
-
-      <h3>涙点プラグ</h3>
-      <p>点眼だけでは改善しない場合、<br>
-      涙の出口（涙点）に小さなプラグを挿入し、<br>
-      涙を目の表面にとどめる治療を行います。</p>
-
-      <h3>IPL治療</h3>
-      <p>重症のドライアイや、マイボーム腺機能不全に<br>
-      効果的な治療です。<br>
-      光を照射することでマイボーム腺の機能を改善し、<br>
-      涙の蒸発を防ぎます。</p>
-
-      <div class="highlight-box">
-        <div class="label">料金</div>
-        <p>月1回×3回のコース治療<br>
-        3回合計：11,000円（税込）<br>
-        ※IPL治療は保険適応外の自由診療です。</p>
-      </div>
-
-    </div>
-
-    <div style="text-align: center; margin-top: 48px;">
-      <a href="ipl-dryeye.html" class="btn-reserve">ドライアイ治療の詳細はこちら</a>
     </div>
   </div>
 </section>
