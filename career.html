@@ -43,6 +43,10 @@ nav a:hover::after, nav a.current::after { width: 100%; }
 .dropdown a { color: #1a2420 !important; padding: 10px 20px; font-size: 13px; display: block; text-align: center; }
 .dropdown a::after { display: none; }
 .dropdown a:hover { color: var(--accent) !important; background: var(--paper-warm); }
+.dropdown-2col { flex-direction: row; min-width: 360px; padding: 0; }
+.dropdown-col { flex: 1; display: flex; flex-direction: column; padding: 8px 0; }
+.dropdown-col:first-child { border-right: 1px solid var(--line-soft); }
+.dropdown-col-head { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: var(--accent); padding: 8px 16px 6px; }
 .reserve-btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; background: var(--accent); color: var(--paper); text-decoration: none; font-size: 13px; letter-spacing: 0.12em; border-radius: 2px; transition: background 0.2s, transform 0.2s; }
 .reserve-btn:hover { background: var(--accent-deep); transform: translateY(-1px); }
 
@@ -223,17 +227,24 @@ footer { background: var(--paper-warm); padding: 80px 32px 32px; }
       <ul>
         <li class="has-dropdown">
           <a href="#">診療内容</a>
-          <div class="dropdown">
-            <a href="glaucoma.html">緑内障</a>
-            <a href="cataract.html">白内障</a>
-            <a href="multifocal.html">多焦点眼内レンズ</a>
-            <a href="icl.html">ICL</a>
-            <a href="ipl-beauty.html">IPL治療</a>
-            <a href="ipl-dryeye.html">IPLドライアイ治療</a>
-            <a href="eyelash.html">まつ毛外来</a>
-            <a href="general.html">眼科一般</a>
-            <a href="ptosis.html">眼瞼下垂</a>
-            <a href="myopia.html">近視進行抑制</a>
+          <div class="dropdown dropdown-2col">
+            <div class="dropdown-col">
+              <div class="dropdown-col-head">保険診療</div>
+              <a href="glaucoma.html">緑内障</a>
+              <a href="cataract.html">白内障</a>
+              <a href="ptosis.html">眼瞼下垂（手術）</a>
+              <a href="general.html">眼科一般</a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-col-head">自由診療</div>
+              <a href="multifocal.html">多焦点眼内レンズ</a>
+              <a href="icl.html">ICL</a>
+              <a href="myopia.html">近視進行抑制</a>
+              <a href="ipl-beauty.html">IPL治療</a>
+              <a href="ipl-dryeye.html">IPLドライアイ治療</a>
+              <a href="ptosis.html">眼瞼下垂（点眼）</a>
+              <a href="eyelash.html">まつ毛外来</a>
+            </div>
           </div>
         </li>
         <li><a href="doctors.html">医師紹介</a></li>

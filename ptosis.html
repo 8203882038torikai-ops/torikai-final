@@ -103,6 +103,27 @@
     color: var(--accent);
     background: var(--paper-warm);
   }
+  .dropdown-2col {
+    flex-direction: row;
+    min-width: 360px;
+    padding: 0;
+  }
+  .dropdown-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+  }
+  .dropdown-col:first-child {
+    border-right: 1px solid var(--line-soft);
+  }
+  .dropdown-col-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    padding: 8px 16px 6px;
+  }
   .reserve-btn {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 11px 22px;
@@ -665,17 +686,24 @@
       <ul>
         <li class="has-dropdown">
           <a href="#">診療内容</a>
-          <div class="dropdown">
-            <a href="glaucoma.html">緑内障</a>
-            <a href="Ptosis.html">白内障</a>
-            <a href="multifocal.html">多焦点眼内レンズ</a>
-            <a href="icl.html">ICL</a>
-            <a href="ipl-beauty.html">IPL治療</a>
-            <a href="ipl-dryeye.html">IPLドライアイ治療</a>
-            <a href="eyelash.html">まつ毛外来</a>
-            <a href="general.html">眼科一般</a>
-            <a href="ptosis.html">眼瞼下垂</a>
-            <a href="myopia.html">近視進行抑制</a>
+          <div class="dropdown dropdown-2col">
+            <div class="dropdown-col">
+              <div class="dropdown-col-head">保険診療</div>
+              <a href="glaucoma.html">緑内障</a>
+              <a href="cataract.html">白内障</a>
+              <a href="ptosis.html">眼瞼下垂（手術）</a>
+              <a href="general.html">眼科一般</a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-col-head">自由診療</div>
+              <a href="multifocal.html">多焦点眼内レンズ</a>
+              <a href="icl.html">ICL</a>
+              <a href="myopia.html">近視進行抑制</a>
+              <a href="ipl-beauty.html">IPL治療</a>
+              <a href="ipl-dryeye.html">IPLドライアイ治療</a>
+              <a href="ptosis.html">眼瞼下垂（点眼）</a>
+              <a href="eyelash.html">まつ毛外来</a>
+            </div>
           </div>
         </li>
         <li><a href="doctors.html">医師紹介</a></li>
@@ -806,11 +834,11 @@
             <td style="padding:10px 8px; text-align:right; font-weight:600;">1,000円</td>
           </tr>
           <tr style="border-bottom:1px solid var(--line-soft);">
-            <td style="padding:10px 8px; color:var(--ink-soft);">アップニークミニ 10本</td>
+            <td style="padding:10px 8px;">アップニークミニ 10本<br><span style="font-size:12px; color:var(--ink-soft);">お試し・はじめての方に</span></td>
             <td style="padding:10px 8px; text-align:right; font-weight:600;">2,000円</td>
           </tr>
           <tr>
-            <td style="padding:10px 8px; color:var(--ink-soft);">アップニークミニ 30本</td>
+            <td style="padding:10px 8px;">アップニークミニ 30本<span style="margin-left:8px; font-size:11px; background:var(--accent); color:#fff; padding:2px 6px; border-radius:3px; vertical-align:middle;">1本あたりお得</span><br><span style="font-size:12px; color:var(--ink-soft);">継続してお使いの方におすすめ</span></td>
             <td style="padding:10px 8px; text-align:right; font-weight:600;">5,000円</td>
           </tr>
         </table>
