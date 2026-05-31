@@ -1315,6 +1315,21 @@
     .news-date { min-width: auto; }
     .news-title { width: 100%; flex: none; }
   }
+  /* 採用情報固定バナー */
+  .news-item--pinned {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+  }
+  .news-item--pinned .news-title {
+    font-weight: 600;
+    color: var(--accent-deep);
+  }
+  .news-tag--recruit {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+  }
 
 </style>
 </head>
@@ -1527,6 +1542,27 @@
     <div class="section-label">News</div>
     <h2 class="section-title">お知らせ</h2>
     <ul class="news-list">
+
+      <!-- ▼▼▼ 固定：採用情報（常に表示） ▼▼▼ -->
+      <li class="news-item news-item--pinned">
+        <div class="news-date">
+          <svg class="news-clock-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          2026.05.06
+        </div>
+        <span class="news-tag news-tag--recruit">採用情報</span>
+        <p class="news-title"><a href="career.html" style="color:inherit; text-decoration:none;">視能訓練士（ORT）・医療事務・看護師を募集中です。詳細は採用情報ページをご覧ください。</a></p>
+      </li>
+      <!-- ▲▲▲ 固定ここまで ▲▲▲ -->
+
+      <!-- ▼ お知らせ（新しいものを上に追加、3件まで） -->
+      <li class="news-item">
+        <div class="news-date">
+          <svg class="news-clock-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          2026.05.23
+        </div>
+        <span class="news-tag">お知らせ</span>
+        <p class="news-title">電子的診療情報連携体制整備加算（加算3）を取得しました。</p>
+      </li>
       <li class="news-item">
         <div class="news-date">
           <svg class="news-clock-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -1535,14 +1571,8 @@
         <span class="news-tag">お知らせ</span>
         <p class="news-title">ホームページをリニューアルしました。</p>
       </li>
-      <li class="news-item">
-        <div class="news-date">
-          <svg class="news-clock-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          2026.05.06
-        </div>
-        <span class="news-tag">採用情報</span>
-        <p class="news-title">視能訓練士（ORT）・医療事務・看護師を募集中です。</p>
-      </li>
+      <!-- ▲ お知らせここまで ▲ -->
+
     </ul>
   </div>
 </section>
