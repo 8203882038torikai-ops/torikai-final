@@ -152,6 +152,20 @@ h2.section-title { font-family: 'Noto Serif JP', serif; font-weight: 500; font-s
 .media-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .media-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border: 1px solid var(--accent); color: var(--accent-deep); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; border-radius: 2px; transition: background 0.2s, color 0.2s; }
 .media-btn:hover { background: var(--accent); color: var(--paper); }
+/* ─── Detail Toggle ─── */
+.detail-toggle {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 16px 20px;
+  background: var(--paper-warm); border: 1px solid var(--line-soft); border-top: none;
+  cursor: pointer; font-family: 'Noto Serif JP', serif;
+  font-size: 14px; letter-spacing: 0.06em; color: var(--accent-deep);
+  transition: background 0.2s;
+}
+.detail-toggle:hover { background: var(--accent-soft); }
+.detail-toggle .dt-arrow { font-size: 11px; transition: transform 0.3s; }
+.detail-toggle.open .dt-arrow { transform: rotate(180deg); }
+.detail-body { display: none; }
+.detail-body.open { display: block; }
 @media (max-width: 900px) {
   .req-row { grid-template-columns: 1fr; }
   .req-label { padding: 14px 18px 4px; }
@@ -471,6 +485,8 @@ footer { background: var(--paper-warm); padding: 80px 32px 32px; }
           <span class="req-label">必須資格</span>
           <span class="req-value">不問（高卒以上・無資格・未経験歓迎 / 医療事務経験者優遇 / ブランクOK）</span>
         </div>
+        <button class="detail-toggle" data-detail="dt-jimu" aria-expanded="false" aria-controls="dt-jimu">給与・詳細条件を見る <span class="dt-arrow">▼</span></button>
+        <div class="detail-body" id="dt-jimu">
         <div class="req-row">
           <span class="req-label">給与</span>
           <span class="req-value">月給 180,000円〜200,000円（経験により優遇）</span>
@@ -520,6 +536,7 @@ footer { background: var(--paper-warm); padding: 80px 32px 32px; }
           </div>
         </div>
       </div>
+        </div>
       <div class="media-note">
         <p>勤務条件や職場見学など、ご不明な点はお気軽にお問い合わせください。</p>
         <a href="#contact" class="media-btn">お問い合わせ・応募はこちら</a>
@@ -548,6 +565,8 @@ footer { background: var(--paper-warm); padding: 80px 32px 32px; }
           <span class="req-label">必須資格</span>
           <span class="req-value">看護師免許または准看護師免許（ブランクOK）</span>
         </div>
+        <button class="detail-toggle" data-detail="dt-nurse" aria-expanded="false" aria-controls="dt-nurse">給与・詳細条件を見る <span class="dt-arrow">▼</span></button>
+        <div class="detail-body" id="dt-nurse">
         <div class="req-row">
           <span class="req-label">給与</span>
           <span class="req-value">月給 230,000円〜250,000円</span>
@@ -597,6 +616,7 @@ footer { background: var(--paper-warm); padding: 80px 32px 32px; }
           </div>
         </div>
       </div>
+        </div>
       <div class="media-note">
         <p>勤務条件や職場見学など、ご不明な点はお気軽にお問い合わせください。</p>
         <a href="#contact" class="media-btn">お問い合わせ・応募はこちら</a>
@@ -618,6 +638,8 @@ footer { background: var(--paper-warm); padding: 80px 32px 32px; }
           <span class="req-label">必須資格</span>
           <span class="req-value">視能訓練士免許（ブランクOK）</span>
         </div>
+        <button class="detail-toggle" data-detail="dt-ort" aria-expanded="false" aria-controls="dt-ort">給与・詳細条件を見る <span class="dt-arrow">▼</span></button>
+        <div class="detail-body" id="dt-ort">
         <div class="req-row">
           <span class="req-label">給与</span>
           <span class="req-value">月給 230,000円〜250,000円</span>
@@ -667,6 +689,7 @@ footer { background: var(--paper-warm); padding: 80px 32px 32px; }
           </div>
         </div>
       </div>
+        </div>
       <div class="media-note">
         <p>勤務条件や職場見学など、ご不明な点はお気軽にお問い合わせください。</p>
         <a href="#contact" class="media-btn">お問い合わせ・応募はこちら</a>
@@ -845,6 +868,17 @@ mobileMenu.querySelectorAll('a').forEach(a => {
     hamburger.setAttribute('aria-expanded', 'false');
     mobileMenu.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+  });
+});
+
+// ── 詳細条件 toggle ──
+document.querySelectorAll('.detail-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const body = document.getElementById(btn.dataset.detail);
+    const isOpen = body.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+    btn.querySelector('.dt-arrow').textContent = isOpen ? '▲' : '▼';
   });
 });
 
