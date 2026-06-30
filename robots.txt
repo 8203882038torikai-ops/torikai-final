@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /_preview.html
 
-Sitemap: https://torikai-eyeclinic.com/sitemap.xml
+Sitemap: https://www.torikai-eyeclinic.com/sitemap.xml

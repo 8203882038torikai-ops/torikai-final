@@ -3,7 +3,7 @@
 
   <!-- トップページ -->
   <url>
-    <loc>https://torikai-eyeclinic.com/</loc>
+    <loc>https://www.torikai-eyeclinic.com/</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,31 +11,31 @@
 
   <!-- 保険診療 -->
   <url>
-    <loc>https://torikai-eyeclinic.com/general.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/general.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/cataract.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/cataract.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/glaucoma.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/glaucoma.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/myopia.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/myopia.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/ptosis.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/ptosis.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -43,37 +43,37 @@
 
   <!-- 自由診療 -->
   <url>
-    <loc>https://torikai-eyeclinic.com/icl.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/icl.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/multifocal.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/multifocal.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/ptosis-eyedrop.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/ptosis-eyedrop.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/ipl-dryeye.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/ipl-dryeye.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/ipl-beauty.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/ipl-beauty.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/eyelash.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/eyelash.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -81,25 +81,25 @@
 
   <!-- クリニック情報 -->
   <url>
-    <loc>https://torikai-eyeclinic.com/first-visit.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/first-visit.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/doctors.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/doctors.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/facility.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/facility.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/access.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/access.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -107,13 +107,13 @@
 
   <!-- その他 -->
   <url>
-    <loc>https://torikai-eyeclinic.com/career.html</loc>
-    <lastmod>2026-06-16</lastmod>
+    <loc>https://www.torikai-eyeclinic.com/career.html</loc>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://torikai-eyeclinic.com/disclosure.html</loc>
+    <loc>https://www.torikai-eyeclinic.com/disclosure.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

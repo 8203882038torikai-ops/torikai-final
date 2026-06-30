@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "torikai-eyeclinic.com" }],
+      "destination": "https://www.torikai-eyeclinic.com/$1",
+      "permanent": true
+    }
+  ]
+}
